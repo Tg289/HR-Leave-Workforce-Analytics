@@ -1,0 +1,21 @@
+employee_id,name,department,designation,joining_date,status
+E001,Aarav Sharma,Engineering,Software Engineer,2023-01-10,Active
+E002,Diya Mehta,Engineering,Frontend Developer,2022-07-18,Active
+E003,Rohan Verma,HR,HR Executive,2024-02-12,Active
+E004,Ananya Gupta,Finance,Financial Analyst,2021-09-20,Active
+E005,Kunal Singh,Sales,Sales Executive,2023-05-15,Active
+E006,Meera Iyer,Operations,Operations Executive,2022-11-07,Active
+E007,Arjun Kapoor,Engineering,Software Engineer,2024-01-08,Active
+E008,Simran Kaur,HR,Recruiter,2023-03-13,Active
+E009,Dev Patel,Finance,Accountant,2022-04-25,Active
+E010,Ishita Jain,Sales,Sales Executive,2024-06-03,Active
+E011,Aditya Rao,Operations,Operations Analyst,2023-08-21,Active
+E012,Nisha Shah,Engineering,QA Engineer,2022-10-17,Active
+E013,Rahul Nair,Finance,Financial Analyst,2024-03-11,Active
+E014,Priya Malhotra,Sales,Account Manager,2021-12-06,Active
+E015,Varun Joshi,Operations,Operations Executive,2023-09-04,Active
+E016,Sana Khan,Engineering,Backend Developer,2024-05-20,Active
+E017,Mohit Bansal,HR,HR Analyst,2022-06-27,Active
+E018,Riya Sethi,Sales,Sales Executive,2023-11-13,Active
+E019,Yash Agarwal,Finance,Accountant,2021-08-16,Active
+E020,Kavya Menon,Operations,Operations Analyst,2024-07-01,Active
