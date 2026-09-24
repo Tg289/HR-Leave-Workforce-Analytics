@@ -85,4 +85,4 @@ Visuals:
 
 ## Data limitation
 
-The current attendance sample contains January and February 2025 only. Do not describe attendance KPIs as full-year 2025 results unless the attendance dataset is expanded. Leave records cover the full 2025 year.
+The attendance dataset contains 240 employee-month rows covering January-December 2025. The `month_date` field provides the first day of each month for the Power BI DateTable relationship. Leave records also cover the full 2025 year.
