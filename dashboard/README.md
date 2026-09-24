@@ -1,10 +1,16 @@
 # Dashboard Assets
 
-This folder is reserved for exported Power BI screenshots.
+This folder contains Power BI layout references and is the destination for final report screenshots.
 
-Recommended final files:
-- hr_overview.png
-- leave_analysis.png
-- workforce_attendance.png
+## Wireframes
+- `hr_overview_wireframe.svg`
+- `leave_analysis_wireframe.svg`
+- `workforce_attendance_wireframe.svg`
 
-The SVG wireframe in this repository is a layout reference only. Replace it with screenshots from the completed Power BI report before using the project in a resume or portfolio.
+## Final export files
+After building and validating the PBIX:
+- `hr_overview.png`
+- `leave_analysis.png`
+- `workforce_attendance.png`
+
+The SVGs are layout references only. The final screenshots should come from the actual Power BI Desktop report.
