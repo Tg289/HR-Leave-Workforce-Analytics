@@ -11,11 +11,11 @@ Calculated from the current synthetic CSV files in this repository.
 | Approved Leave Days | 77 |
 | Leave Approval Rate | 97.1% |
 | Avg Leave Days per Approved Request | 2.26 |
-| Average Attendance Rate (Jan-Feb sample) | 91.48% |
-| Total Working Days (Jan-Feb sample) | 420 |
-| Total Present Days (Jan-Feb sample) | 384 |
-| Total WFH Days (Jan-Feb sample) | 9 |
-| WFH Utilization Rate (Jan-Feb sample) | 2.14% |
+| Average Attendance Rate (2025) | 98.50% |
+| Total Working Days (2025) | 5,180 |
+| Total Present Days (2025) | 5,103 |
+| Total WFH Days (2025) | 196 |
+| WFH Utilization Rate (2025) | 3.78% |
 
 ## Approved leave days by department
 - Engineering: 18 days
@@ -24,4 +24,4 @@ Calculated from the current synthetic CSV files in this repository.
 - Sales: 13 days
 - Operations: 13 days
 
-> Attendance figures are explicitly limited to the January-February 2025 sample. They should not be described as full-year results.
+> Attendance is now represented by 240 employee-month rows covering January-December 2025. All data remains synthetic.
