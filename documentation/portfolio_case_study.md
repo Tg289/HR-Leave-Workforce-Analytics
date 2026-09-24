@@ -11,8 +11,8 @@ Build a reporting solution that converts operational HR records into decision-re
 
 ## Approach
 1. Defined business requirements.
-2. Created a synthetic employee master and transactional leave dataset.
-3. Added a monthly attendance sample.
+2. Created synthetic employee and leave datasets.
+3. Built a full-year 2025 monthly attendance dataset with 240 employee-month rows.
 4. Performed data-quality checks with SQL.
 5. Designed a star-style Power BI model.
 6. Created DAX measures for leave, approval, attendance, and WFH KPIs.
@@ -26,7 +26,10 @@ Build a reporting solution that converts operational HR records into decision-re
 - As-Is / To-Be process
 - SQL analysis
 - DAX measures
-- Power BI dashboard specification
+- Power BI data model
+- Dashboard page specifications
+- Power BI theme
+- QA checklist
 - Business recommendations
 
 ## Interview explanation
@@ -34,9 +37,16 @@ Build a reporting solution that converts operational HR records into decision-re
 
 **My role:** I translated the business problem into requirements, prepared the data model, wrote SQL analysis, defined DAX KPIs, and designed a Power BI reporting layer.
 
-**Key analytical questions:** Which departments have higher leave volumes? What is the approval rate? Which leave types are most common? How does attendance vary across departments?
+**Key analytical questions:** Which departments have higher leave volumes? What is the approval rate? Which leave types are most common? How does attendance vary across departments? How much WFH activity is represented in the workforce sample?
 
 **Business value:** The solution gives HR a repeatable reporting framework for monitoring workforce availability and leave demand.
 
+## Current synthetic KPI snapshot
+- Active Headcount: 20
+- Total Leave Requests: 35
+- Approved Leave Days: 77
+- Average Attendance Rate: 98.50%
+- Total WFH Days: 196
+
 ## Important limitation
-The attendance dataset is intentionally small and currently covers January-February 2025. It is a portfolio sample, not a production HR dataset.
+All records are synthetic and created for portfolio/learning purposes. They should not be presented as real company HR data.
