@@ -1,0 +1,130 @@
+// HR Leave & Workforce Analytics
+// Core DAX measures for the Power BI report
+
+Active Headcount =
+CALCULATE(
+    COUNTROWS(Employees),
+    Employees[status] = "Active"
+)
+
+Total Leave Requests =
+COUNTROWS('Leave Records')
+
+Approved Leave Requests =
+CALCULATE(
+    COUNTROWS('Leave Records'),
+    'Leave Records'[status] = "Approved"
+)
+
+Pending Leave Requests =
+CALCULATE(
+    COUNTROWS('Leave Records'),
+    'Leave Records'[status] = "Pending"
+)
+
+Rejected Leave Requests =
+CALCULATE(
+    COUNTROWS('Leave Records'),
+    'Leave Records'[status] = "Rejected"
+)
+
+Leave Approval Rate =
+DIVIDE(
+    [Approved Leave Requests],
+    [Total Leave Requests],
+    0
+)
+
+Approved Leave Days =
+CALCULATE(
+    SUM('Leave Records'[leave_days]),
+    'Leave Records'[status] = "Approved"
+)
+
+Pending Leave Days =
+CALCULATE(
+    SUM('Leave Records'[leave_days]),
+    'Leave Records'[status] = "Pending"
+)
+
+Avg Leave Days per Request =
+DIVIDE(
+    [Approved Leave Days],
+    [Approved Leave Requests],
+    0
+)
+
+Leave Days per Employee =
+DIVIDE(
+    [Approved Leave Days],
+    [Active Headcount],
+    0
+)
+
+Average Attendance Rate =
+AVERAGE('Attendance Summary'[attendance_rate]) / 100
+
+Total Working Days =
+SUM('Attendance Summary'[working_days])
+
+Total Present Days =
+SUM('Attendance Summary'[present_days])
+
+Attendance Leave Days =
+SUM('Attendance Summary'[leave_days])
+
+Total WFH Days =
+SUM('Attendance Summary'[wfh_days])
+
+WFH Utilization Rate =
+DIVIDE(
+    [Total WFH Days],
+    [Total Working Days],
+    0
+)
+
+Present Day Rate =
+DIVIDE(
+    [Total Present Days],
+    [Total Working Days],
+    0
+)
+
+Leave Day Rate =
+DIVIDE(
+    [Attendance Leave Days],
+    [Total Working Days],
+    0
+)
+
+Employees With Leave =
+DISTINCTCOUNT('Leave Records'[employee_id])
+
+Average Leave Days Per Employee =
+DIVIDE(
+    [Approved Leave Days],
+    [Employees With Leave],
+    0
+)
+
+Approved Leave Days MoM % =
+VAR CurrentMonth = [Approved Leave Days]
+VAR PreviousMonth =
+    CALCULATE(
+        [Approved Leave Days],
+        DATEADD('DateTable'[Date], -1, MONTH)
+    )
+RETURN
+DIVIDE(CurrentMonth - PreviousMonth, PreviousMonth, 0)
+
+DateTable =
+ADDCOLUMNS(
+    CALENDAR(DATE(2025,1,1), DATE(2025,12,31)),
+    "Year", YEAR([Date]),
+    "Month Number", MONTH([Date]),
+    "Month", FORMAT([Date], "MMM"),
+    "Month Year", FORMAT([Date], "MMM YYYY")
+)
+
+// Sort DateTable[Month] by DateTable[Month Number].
+// Sort DateTable[Month Year] by DateTable[Month Number] where appropriate.
