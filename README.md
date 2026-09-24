@@ -1,54 +1,142 @@
 # HR Leave & Workforce Analytics
 
-A portfolio project focused on analyzing employee leave and attendance patterns and translating the findings into actionable HR decisions.
+A portfolio-ready Data Analyst / Business Analyst project that converts synthetic HR leave and attendance data into SQL analysis, Power BI KPIs, and business recommendations.
 
 ## Business Problem
 
-HR teams often track leave and attendance through disconnected spreadsheets or manual records. This makes it harder to monitor leave trends, compare departments, identify recurring attendance issues, and prepare consistent management reports.
+HR teams often track employee, leave, and attendance information across disconnected spreadsheets. This makes it difficult to monitor workforce availability, compare departments, identify leave patterns, and produce consistent management reporting.
 
-## Objectives
+## Project Objective
 
-- Centralize employee, leave, and attendance data
-- Measure leave and attendance KPIs
-- Analyze trends by department, leave type, employee, and month
-- Document business requirements and the current/future process
-- Convert analysis into practical HR recommendations
+Build a repeatable HR analytics workflow:
 
-## Tools
+**Business Problem → Requirements → Data → SQL → Power BI/DAX → Insights → Recommendations**
 
-- Excel / CSV
-- SQL
-- Power BI
-- DAX
-- Business Analysis documentation
+## Deliverables
 
-## Project Flow
+- Synthetic HR employee dataset
+- Synthetic leave transaction dataset
+- Monthly attendance sample
+- SQL data-quality checks
+- SQL leave analysis
+- SQL KPI queries
+- BRD
+- Functional requirements
+- User stories + acceptance criteria
+- As-Is / To-Be process
+- DAX KPI measures
+- Power BI data model
+- 3-page dashboard specification
+- Power BI theme
+- Dashboard wireframe
+- QA checklist
+- Expected KPI snapshot
+- Business recommendations
+- Portfolio case study
+- Attribution/license note
 
-**Business Problem → Data → SQL Analysis → Power BI Dashboard → Insights → Recommendations**
+## Power BI Dashboard
 
-## Key Business Questions
+The report is designed as three pages:
 
-1. How many active employees are there?
-2. What is the leave approval rate?
-3. Which departments have higher leave volumes?
-4. Which leave types are used most frequently?
-5. How does leave usage change month to month?
-6. Which employees have comparatively high leave usage?
-7. What does attendance look like across departments?
-8. How can HR improve workforce planning and reporting?
+1. **HR Overview**
+   - Active Headcount
+   - Leave Requests
+   - Approved Leave Days
+   - Leave Approval Rate
+   - Average Attendance Rate
+   - Monthly leave trend
+   - Leave mix
+   - Department comparison
+
+2. **Leave Analysis**
+   - Leave request trend
+   - Leave type analysis
+   - Department analysis
+   - Employee leave utilization
+   - Pending requests
+
+3. **Workforce & Attendance**
+   - Attendance rate
+   - Present days
+   - WFH days
+   - WFH utilization
+   - Department and employee attendance analysis
+
+See the powerbi folder for the exact model, DAX, visual configuration, theme, and QA checklist.
+
+## Current KPI Snapshot
+
+From the current synthetic data:
+
+- Active Headcount: **20**
+- Total Leave Requests: **35**
+- Approved Leave Requests: **34**
+- Pending Leave Requests: **1**
+- Approved Leave Days: **77**
+- Leave Approval Rate: **97.1%**
+- Average Leave Days per Approved Request: **2.26**
+
+Attendance metrics are based only on the January-February 2025 sample:
+
+- Average Attendance Rate: **91.48%**
+- Total Working Days: **420**
+- Total Present Days: **384**
+- Total WFH Days: **9**
+- WFH Utilization: **2.14%**
 
 ## Repository Structure
 
-- `data/` - synthetic employee, leave, and attendance datasets
-- `sql/` - data-quality checks, analysis queries, and KPI queries
-- `documentation/` - BRD, requirements, user stories, and As-Is/To-Be process
-- `insights/` - business recommendations
-- `LICENSES_AND_ATTRIBUTION.md` - reference and attribution notes
+HR-Leave-Workforce-Analytics/
+├── data/
+│   ├── employees.csv
+│   ├── leave_records.csv
+│   └── attendance_summary.csv
+├── sql/
+│   ├── 01_data_quality.sql
+│   ├── 02_leave_analysis.sql
+│   └── 03_hr_kpis.sql
+├── powerbi/
+│   ├── README.md
+│   ├── dax_measures.dax
+│   ├── data_model.md
+│   ├── page_build_spec.md
+│   ├── theme.json
+│   ├── expected_kpi_snapshot.md
+│   └── qa_checklist.md
+├── dashboard/
+│   ├── README.md
+│   └── hr_overview_wireframe.svg
+├── documentation/
+│   ├── BRD.md
+│   ├── requirements.md
+│   ├── user_stories.md
+│   ├── as-is-to-be-process.md
+│   └── portfolio_case_study.md
+├── insights/
+│   └── business_recommendations.md
+└── LICENSES_AND_ATTRIBUTION.md
 
 ## Dataset
 
-The included data is synthetic and created for portfolio/learning purposes. It does not contain real employee information.
+All included data is synthetic and created for portfolio/learning purposes. It does not contain real employee information.
 
-## Reference Note
+## Important Limitation
 
-The project structure and analytical direction were informed by publicly available HR analytics examples. The implementation in this repository is written as an original portfolio project and does not reproduce the referenced repositories' code, dashboards, documentation, or branding.
+The attendance sample currently covers **January and February 2025 only**. Therefore, attendance KPIs must be presented as sample-period metrics, not full-year 2025 results.
+
+## Portfolio Positioning
+
+This project demonstrates:
+
+- SQL analytics
+- Power BI dashboard design
+- DAX KPI development
+- Data modeling
+- Requirements gathering
+- User stories and acceptance criteria
+- Process analysis
+- Business interpretation
+- Recommendation writing
+
+The implementation is an original portfolio project. Public HR analytics repositories were used only as references for analytical direction; their code, dashboards, documentation, and branding are not reproduced.
