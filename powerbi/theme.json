@@ -1,0 +1,14 @@
+{
+  "name": "HR Workforce Analytics",
+  "dataColors": [
+    "#17324D",
+    "#2F6B8A",
+    "#6FA8C4",
+    "#AFC7D6",
+    "#4F7A5A",
+    "#D4A72C"
+  ],
+  "background": "#F5F7FA",
+  "foreground": "#17212B",
+  "tableAccent": "#2F6B8A"
+}
