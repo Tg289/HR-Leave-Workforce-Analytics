@@ -3,20 +3,17 @@
 A portfolio-ready Data Analyst / Business Analyst project that converts synthetic HR leave and attendance data into SQL analysis, Power BI KPIs, and business recommendations.
 
 ## Business Problem
-
 HR teams often track employee, leave, and attendance information across disconnected spreadsheets. This makes it difficult to monitor workforce availability, compare departments, identify leave patterns, and produce consistent management reporting.
 
 ## Project Objective
-
 Build a repeatable HR analytics workflow:
 
 **Business Problem → Requirements → Data → SQL → Power BI/DAX → Insights → Recommendations**
 
 ## Deliverables
-
 - Synthetic HR employee dataset
 - Synthetic leave transaction dataset
-- Monthly attendance sample
+- Full-year 2025 monthly attendance dataset
 - SQL data-quality checks
 - SQL leave analysis
 - SQL KPI queries
@@ -28,11 +25,12 @@ Build a repeatable HR analytics workflow:
 - Power BI data model
 - 3-page dashboard specification
 - Power BI theme
-- Dashboard wireframe
+- 3 dashboard wireframes
 - QA checklist
 - Expected KPI snapshot
 - Business recommendations
 - Portfolio case study
+- Power BI Desktop build instructions
 - Attribution/license note
 
 ## Power BI Dashboard
@@ -63,7 +61,7 @@ The report is designed as three pages:
    - WFH utilization
    - Department and employee attendance analysis
 
-See the powerbi folder for the exact model, DAX, visual configuration, theme, and QA checklist.
+See `powerbi/` for the model, DAX, visual configuration, theme, QA checklist, and exact build steps.
 
 ## Current KPI Snapshot
 
@@ -76,14 +74,11 @@ From the current synthetic data:
 - Approved Leave Days: **77**
 - Leave Approval Rate: **97.1%**
 - Average Leave Days per Approved Request: **2.26**
-
-Attendance metrics are based only on the January-February 2025 sample:
-
-- Average Attendance Rate: **91.48%**
-- Total Working Days: **420**
-- Total Present Days: **384**
-- Total WFH Days: **9**
-- WFH Utilization: **2.14%**
+- Average Attendance Rate (2025): **98.50%**
+- Total Working Days (2025): **5,180**
+- Total Present Days (2025): **5,103**
+- Total WFH Days (2025): **196**
+- WFH Utilization: **3.78%**
 
 ## Repository Structure
 
@@ -101,12 +96,15 @@ HR-Leave-Workforce-Analytics/
 │   ├── dax_measures.dax
 │   ├── data_model.md
 │   ├── page_build_spec.md
+│   ├── build_instructions.md
 │   ├── theme.json
 │   ├── expected_kpi_snapshot.md
 │   └── qa_checklist.md
 ├── dashboard/
 │   ├── README.md
-│   └── hr_overview_wireframe.svg
+│   ├── hr_overview_wireframe.svg
+│   ├── leave_analysis_wireframe.svg
+│   └── workforce_attendance_wireframe.svg
 ├── documentation/
 │   ├── BRD.md
 │   ├── requirements.md
@@ -118,17 +116,10 @@ HR-Leave-Workforce-Analytics/
 └── LICENSES_AND_ATTRIBUTION.md
 
 ## Dataset
-
 All included data is synthetic and created for portfolio/learning purposes. It does not contain real employee information.
 
-## Important Limitation
-
-The attendance sample currently covers **January and February 2025 only**. Therefore, attendance KPIs must be presented as sample-period metrics, not full-year 2025 results.
-
 ## Portfolio Positioning
-
 This project demonstrates:
-
 - SQL analytics
 - Power BI dashboard design
 - DAX KPI development
@@ -140,3 +131,6 @@ This project demonstrates:
 - Recommendation writing
 
 The implementation is an original portfolio project. Public HR analytics repositories were used only as references for analytical direction; their code, dashboards, documentation, and branding are not reproduced.
+
+## Final manual step
+The only major artifact not generated here is the actual **.pbix** file. Build it in Power BI Desktop using `powerbi/build_instructions.md`, run the QA checklist, then export the three page screenshots into `dashboard/`.
